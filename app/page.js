@@ -4,7 +4,7 @@ import StudentOrTeacher from "@/components/StudentOrTeacher";
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-blue-100 h-screen">
+    <main className="flex flex-col bg-blue-100 h-dvh">
       <Menu />
       <div className="flex-grow flex flex-col">
         <StudentOrTeacher />
