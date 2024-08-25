@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MenuButton = ({ bgColor }) => {
+const TeacherMenuButton = ({ bgColor }) => {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
 
   return (
@@ -55,4 +55,4 @@ const MenuButton = ({ bgColor }) => {
   );
 };
 
-export default MenuButton;
+export default TeacherMenuButton;

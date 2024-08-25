@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import MenuButton from "./MenuButton";
+import TeacherMenuButton from "./TeacherMenuButton";
 import { motion } from "framer-motion";
 
-const Menu = ({ bgColor, buttonBgColor }) => {
+const TeacherMenu = ({ bgColor, buttonBgColor }) => {
   return (
     <div className={`flex flex-row-reverse md:flex-row justify-between items-center ${bgColor} px-8 py-4 shadow-lg z-50 text-sm font-geologica md:text-base`}>
       <motion.div whileHover={{ scale: 1.1 }}>
@@ -19,7 +19,7 @@ const Menu = ({ bgColor, buttonBgColor }) => {
             <div>
               <Image src="/paperclip.svg" width={18} height={18} alt="services-icon" />
             </div>
-            <div>Υπηρεσίες</div>
+            <div>Τάξεις</div>
           </Link>
         </motion.div>
         <motion.div whileHover={{ scale: 1.05, rotate: "5deg" }} className="md:flex hidden">
@@ -27,7 +27,7 @@ const Menu = ({ bgColor, buttonBgColor }) => {
             <div>
               <Image src="/search.svg" width={20} height={20} alt="search-icon" />
             </div>
-            <div>Εξερεύνηση</div>
+            <div>Μαθητές</div>
           </Link>
         </motion.div>
         <motion.div whileHover={{ scale: 1.05, rotate: "-5deg" }} className="md:flex hidden">
@@ -35,7 +35,7 @@ const Menu = ({ bgColor, buttonBgColor }) => {
             <div>
               <Image src="/community.svg" width={22} height={22} alt="community-icon" />
             </div>
-            <div>Κοινότητα</div>
+            <div>Δραστηριότητες</div>
           </Link>
         </motion.div>
         <Link href="/" className="">
@@ -47,9 +47,12 @@ const Menu = ({ bgColor, buttonBgColor }) => {
           </motion.div>
         </Link>
       </div>
-      <MenuButton bgColor={bgColor} />
+      <TeacherMenuButton bgColor={bgColor} />
     </div>
   );
 };
 
-export default Menu;
+export default TeacherMenu;
+// Πλάνα μαθημάτων
+// Δημιουργία διαγωνισμάτων
+// Δημιουργία ερωτήσεων

@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         mansalva: ["Mansalva", "cursive"],
         geologica: ["Geologica", "sans-serif"],
+        "dela-gothic": ['"Dela Gothic One"', "sans-serif"],
       },
       keyframes: {
         bounceRight: {
