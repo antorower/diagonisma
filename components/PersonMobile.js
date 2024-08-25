@@ -9,6 +9,9 @@ const PersonMobile = ({ title, subtitle, hoverText, image, hoverImage, bgColor }
 
   return (
     <div className="flex-grow flex flex-col relative">
+      <Link href="/" className={`absolute top-4 right-8 ${bgColor} rounded px-2 py-1 text-white font-bold font-geologica animate-bounceRight hover:animate-none z-30`}>
+        <Image src="/arrow-right.svg" width={30} height={30} alt="arrow-right" />
+      </Link>
       <Link href="/" className="flex-grow relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         <motion.div initial={{ opacity: 1 }} animate={{ opacity: isHovered ? 0 : 1 }} transition={{ duration: 0.2 }} className="absolute inset-0 z-10">
           <Image src={`/${image}.png`} alt="teacher" fill="true" style={{ objectFit: "contain" }} />
