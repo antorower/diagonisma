@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const PersonMobile = ({ title, subtitle, hoverText, image, hoverImage }) => {
+const PersonMobile = ({ title, subtitle, hoverText, image, hoverImage, bgColor }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ const PersonMobile = ({ title, subtitle, hoverText, image, hoverImage }) => {
           <Image src={`/${hoverImage}.png`} alt="teacher" fill="true" style={{ objectFit: "contain" }} />
         </motion.div>
       </Link>
-      <div className="bg-blue-500 sm:text-xl text-center px-4 py-2 text-white font-semibold z-40 font-geologica">{isHovered ? hoverText : `${title} που διψά ${subtitle};`}</div>
+      <div className={`${bgColor} sm:text-xl text-center px-4 py-2 text-white font-semibold z-40 font-geologica`}>{isHovered ? hoverText : `${title} που διψά ${subtitle};`}</div>
     </div>
   );
 };
